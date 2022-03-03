@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+    <Container version="1">
+    <Name>liquidctl</Name>
+    <Repository>avpnusr/liquidctl</Repository>
+    <Registry>https://hub.docker.com/r/avpnusr/liquidctl</Registry>
+    <Network>None</Network>
+    <Privileged>false</Privileged>
+    <Support></Support>
+    <Project>https://github.com/avpnusr/liquidctl-docker</Project>
+    <Overview></Overview>
+    <WebUI></WebUI>
+    <TemplateURL/>
+    <Icon>https://github.com/avpnusr/liquidctl-docker/raw/master/img/LiquidCTL-icon.png</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <DonateText/>
+    <DonateLink/>
+</Container>
