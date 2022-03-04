@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project>https://github.com/avpnusr/liquidctl-docker</Project>
-  <Overview>Allows you to control an AIO liquid-cooler, that is supported by liquidctl, with a small footprint docker-container.&#xD;
+  <Overview>Allows you to control an AIO liquid-cooler and RGB devices, that are supported by liquidctl, with a small footprint docker-container.&#xD;
 Find detailed information on the usage in the project page: https://github.com/avpnusr/liquidctl-docker&#xD;
 &#xD;
 </Overview>
