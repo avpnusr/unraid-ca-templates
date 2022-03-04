@@ -4,6 +4,6 @@
   <Profile>
    Docker container creator, full-time engineer and openminded geek. That's all ...
   </Profile>
-  </DonateLink>
-  </DonateText>
+  <DonateLink/>
+  <DonateText/>
 </Maintainer>
