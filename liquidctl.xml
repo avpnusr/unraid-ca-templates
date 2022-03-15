@@ -16,7 +16,7 @@ Find detailed information on the usage in the project page: https://github.com/a
   <Category>Tools: Status:Stable</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://github.com/avpnusr/liquidctl-docker/raw/master/img/LiquidCTL-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/avpnusr/liquidctl-docker/master/img/LiquidCTL-icon.png</Icon>
   <ExtraParams>--privileged --log-opt max-size=2m --log-opt max-file=1</ExtraParams>
   <PostArgs/>
   <CPUset/>
