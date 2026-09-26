@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Nespresso Stats</Name>
+  <Repository>ghcr.io/avpnusr/nespresso-stats:latest</Repository>
+  <Registry>https://github.com/avpnusr/nespresso-stats/pkgs/container/nespresso-stats</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/avpnusr/nespresso-stats</Project>
+  <Overview>Self-hosted dashboard for your Nespresso Vertuo capsule inventory: what you have, how many of each, brew history, coffee stats and optional auto-decrement when the machine brews a coffee.&#xD;
+&#xD;
+No login is built in - it is made for a trusted home network. Expose it to the internet only behind an authenticating reverse proxy.&#xD;
+&#xD;</Overview>
+  <Category>HomeAutomation: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8787]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/avpnusr/nespresso-stats/master/static/favicon-180.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Self-hosted dashboard for your Nespresso Vertuo capsule inventory: what you have, how many of each, brew history, coffee stats and optional auto-decrement when the machine brews a coffee.&#xD;
+&#xD;
+No login is built in - it is made for a trusted home network. Expose it to the internet only behind an authenticating reverse proxy.&#xD;
+&#xD;
+Point any brew detector (Home Assistant, BLE, smart plug) at POST /api/brew-detected to log brews automatically. Photo identify uses an optional OpenAI-compatible vision endpoint; set VISION_MODEL to empty to turn it off and identify by colour alone.&#xD;
+&#xD;</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nespresso-stats</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>http://127.0.0.1:11434/v1</Value>
+      <Name>VISION_BASE_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>qwen3.5:4b</Value>
+      <Name>VISION_MODEL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ollama</Value>
+      <Name>VISION_API_KEY</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI Port" Target="8787" Default="8787" Mode="tcp" Description="Port for the Nespresso Stats web dashboard." Type="Port" Display="always" Required="true" Mask="false">8787</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/nespresso-stats" Mode="rw" Description="Holds the SQLite database (nespresso.db). Delete it to re-seed the starter capsule catalogue." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nespresso-stats</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID the app runs as. Default 99 = nobody." Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID the app runs as. Default 100 = users." Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="VISION_BASE_URL" Target="VISION_BASE_URL" Default="http://127.0.0.1:11434/v1" Mode="" Description="OpenAI-compatible vision endpoint for photo identify. 127.0.0.1 is the container itself, so point this at your Ollama host, e.g. http://192.168.1.10:11434/v1." Type="Variable" Display="advanced" Required="false" Mask="false">http://127.0.0.1:11434/v1</Config>
+  <Config Name="VISION_MODEL" Target="VISION_MODEL" Default="qwen3.5:4b" Mode="" Description="Vision model name. Leave empty to turn vision off and identify capsules by colour alone." Type="Variable" Display="advanced" Required="false" Mask="false">qwen3.5:4b</Config>
+  <Config Name="VISION_API_KEY" Target="VISION_API_KEY" Default="ollama" Mode="" Description="API key for the vision endpoint. Ignored by a local Ollama; set your Ollama Cloud key when using https://ollama.com/v1." Type="Variable" Display="advanced" Required="false" Mask="true">ollama</Config>
+</Container>
