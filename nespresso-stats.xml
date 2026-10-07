@@ -8,7 +8,9 @@
   <Privileged>false</Privileged>
   <Icon>https://raw.githubusercontent.com/avpnusr/nespresso-stats/master/static/favicon-180.png</Icon>
   <WebUI>http://[IP]:[PORT:8787]</WebUI>
-  <Overview>Self-hosted dashboard for your Nespresso Vertuo capsule inventory: what you have, how many of each, brew history, coffee stats and optional auto-decrement when the machine brews a coffee.&#xD;
+  <Overview>Self-hosted dashboard for your Nespresso capsule inventory - Vertuo or Original Line: what you have, how many of each, brew history, coffee stats and optional auto-decrement when the machine brews a coffee.&#xD;
+&#xD;
+Pick your capsule system (one machine at a time) under Machine &gt; Capsule system. A Vertuo machine reads the pod's barcode and reports the cup size, so a detected brew is narrowed down automatically; an Original Line machine has no barcode, so a detected brew is queued as "which capsule was it?".&#xD;
 &#xD;
 No login is built in - it is made for a trusted home network. Expose it to the internet only behind an authenticating reverse proxy.&#xD;
 &#xD;</Overview>
@@ -17,7 +19,9 @@ No login is built in - it is made for a trusted home network. Expose it to the i
   <TemplateURL>https://raw.githubusercontent.com/avpnusr/unraid-ca-templates/master/nespresso-stats.xml</TemplateURL>
   <ReadMe>https://raw.githubusercontent.com/avpnusr/nespresso-stats/master/README.md</ReadMe>
   <Category>HomeAutomation: Tools:</Category>
-  <Description>Self-hosted dashboard for your Nespresso Vertuo capsule inventory: what you have, how many of each, brew history, coffee stats and optional auto-decrement when the machine brews a coffee.&#xD;
+  <Description>Self-hosted dashboard for your Nespresso capsule inventory - Vertuo or Original Line: what you have, how many of each, brew history, coffee stats and optional auto-decrement when the machine brews a coffee.&#xD;
+&#xD;
+Pick your capsule system (one machine at a time) under Machine &gt; Capsule system. The choice scopes the tiles, cup sizes, known-capsule picker and photo identification; capsules of the other line stay in the database and come back when you switch back. A Vertuo machine reads the pod's barcode and reports the cup size, so a detected brew is narrowed down automatically; an Original Line machine has no barcode, so a detected brew is queued as "which capsule was it?".&#xD;
 &#xD;
 No login is built in - it is made for a trusted home network. Expose it to the internet only behind an authenticating reverse proxy.&#xD;
 &#xD;
